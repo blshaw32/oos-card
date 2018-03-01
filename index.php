@@ -1,5 +1,16 @@
 <?php
 require_once("env.php");
+
+//the variables set here will be passed in via a link from Salesforce when we are ready to deploy
+$uid = 'cj2rzx8ke075r25z5xh8agmw0';
+$name = 'Brian';
+$email = 'blshaw32@me.com';
+$student_state = 'TN';
+$counselor = 'Irene Carlson';
+$tuition_assist = 3000;
+$transfer_credit = 21;
+$gdc_tuition = 225;
+
 ?>
 
 <link rel="stylesheet" href="form.css">
@@ -14,14 +25,14 @@ require_once("env.php");
     <div>
         <label class="desc" id="uid" for="uid">Student's UID</label>
         <div>
-            <input id="uid" name="uid" type="text" class="field text fn" value="" size="8" tabindex="1">
+            <input id="uid" name="uid" type="text" class="field text fn" value="<?php echo $uid;?>" size="8" tabindex="1">
         </div>
     </div>
 
   <div>
     <label class="desc" id="name" for="name">Student's Full Name</label>
     <div>
-      <input id="name" name="name" type="text" class="field text fn" value="" size="8" tabindex="2">
+      <input id="name" name="name" type="text" class="field text fn" value="<?php echo $name;?>" size="8" tabindex="2">
     </div>
   </div>
 
@@ -29,7 +40,7 @@ require_once("env.php");
     <label class="desc" id="email" for="email">Student's Email
     </label>
     <div>
-      <input id="email" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="3">
+      <input id="email" name="email" type="email" spellcheck="false" value="<?php echo $email;?>" maxlength="255" tabindex="3">
    </div>
   </div>
 
@@ -37,14 +48,14 @@ require_once("env.php");
         <label class="desc" id="state" for="state">Student's State of Residence
         </label>
         <div>
-            <input id="state" name="state" type="state" spellcheck="false" value="" maxlength="255" tabindex="4">
+            <input id="state" name="state" type="state" spellcheck="false" value="<?php echo $student_state;?>" maxlength="255" tabindex="4">
         </div>
     </div>
 
     <div>
         <label class="desc" id="counselor" for="counselor">Counselor's Full Name</label>
         <div>
-            <input id="name" name="counselor" type="text" class="field text fn" value="" size="8" tabindex="5">
+            <input id="name" name="counselor" type="text" class="field text fn" value="<?php echo $counselor;?>" size="8" tabindex="5">
         </div>
     </div>
 
@@ -58,19 +69,19 @@ require_once("env.php");
     <div>
         <label class="desc" id="tuition_assist" for="tuition_assist">Potential Tuition Assistance</label>
         <div>
-            <input id="name" name="tuition_assist" type="number" class="field text fn" value="" size="8" tabindex="7">
+            <input id="name" name="tuition_assist" type="number" class="field text fn" value="<?php echo $tuition_assist;?>" size="8" tabindex="7">
         </div>
     </div>
 
     <div><hr><sgrong>Degree Options:</sgrong><br></div>
 
 
-<hr>
+<hr><!---TODO: from here to just before the submit button; need to have a way to add additional options.  User likes to put in selections for 3 to 5 options at one time.  of which will pass through to present.php as arrays and multiple columns created on the present page. --->
     <div>
         <label class="desc" id="credits1" for="credits1">Transfer Credits
         </label>
         <div>
-            <input id="credits" name="credits1" type="number" spellcheck="false" value="" size="5" maxlength="8" tabindex="8">
+            <input id="credits" name="credits1" type="number" spellcheck="false" value="<?php echo $transfer_credit;?>" size="5" maxlength="8" tabindex="8">
         </div>
     </div>
 
@@ -78,7 +89,7 @@ require_once("env.php");
         <label class="desc" id="gdc_tuition1" for="gdc_tuition1">GDC Tuition
         </label>
         <div>
-            <input id="gdc_tuition1" name="gdc_tuition1" type="number" spellcheck="false" value="225" size="5" maxlength="8" tabindex="9">
+            <input id="gdc_tuition1" name="gdc_tuition1" type="number" spellcheck="false" value="<?php echo $gdc_tuition;?>" size="5" maxlength="8" tabindex="9">
         </div>
     </div>
 

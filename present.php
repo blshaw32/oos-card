@@ -33,7 +33,7 @@ echo $degree1."<BR>";
 echo $major1."<BR>";
 echo $school1."<BR>";
 */
-
+//TODO Once the options are created we need to save them to a data table and present them with a unique URL
 $row_begin = "<table>\n";
 $row0 = "<tr><td>&nbsp;</td>\n";
 $row1 = "<tr><td>Degree Program:</td>\n";
